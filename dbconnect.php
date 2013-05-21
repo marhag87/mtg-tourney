@@ -1,5 +1,15 @@
 <?PHP
 			//---------------------------------------------------------------------------------------------------------------
+			// Include database connection information in the following format:
+			// define("DB_USER","user");
+			// define("DB_PASSWORD","password");
+			// define("DB_HOST","hostname");
+			// define("DB_NAME","databasename");
+			//---------------------------------------------------------------------------------------------------------------
+
+			include('dbconnectinfo.php');
+
+			//---------------------------------------------------------------------------------------------------------------
 			// err - Displays nicely formatted error and exits
 			//---------------------------------------------------------------------------------------------------------------
 			
@@ -35,9 +45,4 @@
 				
 			}
 
-			define("DB_USER","mtgtourney");
-			define("DB_PASSWORD","mtg");
-			define("DB_HOST","localhost");
-			define("DB_NAME","mtgtourney");
-			
 ?>
