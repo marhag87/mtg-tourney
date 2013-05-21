@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type"
+		content="text/html; charset=UTF-8" />
+		<script language="javascript" src="jquery-1.7.1.min.js"></script>
+		<script language="javascript" src="jquery-ui-1.8.16.custom.min.js"></script>
+		<script language="javascript" src="base.js"></script>
+		<script language="javascript" src="playing.js"></script>
+		<script language="javascript" src="oldGames.js"></script>
+		<script language="javascript" src="stats.js"></script>
+		<script language="javascript" src="decks.js"></script>
+		<script language="javascript" src="tourney.js"></script>
+		<script language="javascript" src="piechart.js"></script>
+		<script language="javascript" src="js-class.js"></script>
+		<script language="javascript" src="excanvas.js"></script>
+		<script language="javascript" src="bluff-src.js"></script>
+		<link rel="stylesheet" type="text/css" href="css.css" />
+		<script language="javascript">
+		$(document).ready(function() {
+				menu('playing');
+				getTourneyList();
+				shuffleImages();
+				var tid = setInterval("shuffleImages()", 30000);
+		});
+		</script>
+		<title>MTG Tourney</title>
+	</head>
+	<body>
+		<img id="logo" src="images/logo.png" onClick="shuffleImages()">
+	<div id="bigBox">
+		<img id="backgroundCard1" class="backgroundCard">
+		<img id="backgroundCard2" class="backgroundCard">
+		<img id="backgroundCard3" class="backgroundCard">
+		<img id="backgroundCard4" class="backgroundCard">
+
+		<div id="menu">
+			<input type="button" value="Playing" onClick="menu('playing')">
+			<input type="button" value="Old games" onClick="menu('oldGames')">
+			<input type="button" value="Stats" onClick="menu('stats')">
+			<input type="button" value="Decks" onClick="menu('decks')">
+			<input type="button" value="Tourneys" onClick="menu('tourney')">
+			<span id="tourneyMenu"></span>
+		</div>
+		<div id="contentBox">
+			<table><tr>
+					<td class="statsTable"><div class="content" id="playersAvailable"><h2>Inactive player:</h2></div></td>
+					<td><div style="width:20px;"></div></td>
+					<td class="statsTable"><div class="content" id="playersPlaying"><h2>Active players:</h2></div></td>
+					<td><span class="pieChart"></span></td>
+			</tr></table>
+			<div class="content" id="allDecks"><h2>All decks:</h2></div>
+			<div class="content" id="customDeckList"></div>
+			<div class="content" id="error"></div>
+			<div class="content" id="allTourneys"></div>
+			<div class="content" id="editTourneyForm"></div>
+			<div class="content" id="editDeckForm"></div>
+			<div class="content" id="availableDecks"><h2>Available decks:</h2></div>
+			<div class="content" id="oldGames"><h2>Old games:</h2></div>
+			<div class="content" id="winsStats"><canvas id="canvas" width="150" height="150"></canvas></div>
+			<div class="content" id="winsStatsGraph"><canvas id="graph" width="150" height="150"></canvas></div>
+			<table><tr>
+					<td class="statsTable"><div class="content" id="playerWins"><h2>Player wins:</h2></div></td>
+					<td><div style="width:20px;"></div></td>
+					<td class="statsTable"><div class="content" id="deckWins"><h2>Deck wins:</h2></div></td>
+			</tr></table>
+		</div>
+	</div>
+	</body>
+</html>
