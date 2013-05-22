@@ -31,21 +31,3 @@ function plotData(myData) {
 		lastend += Math.PI*2*(myData[i]/myTotal);
 	}
 }
-
-function plotGraphData(){
-console.log("Stuff");
-	var g = new Bluff.Line('graph', '150x150');
-	g.tooltips = true;
-	g.hide_legend = true;
-	g.hide_line_numbers = true;
-
-	g.theme_pastel();
-
-	g.data("Total", [20, 33, 50, 40, 80, 10]);
-	g.data("Nomel", [10, 0, 20, 40, 10, 5]);
-	g.data("Zombie", [10, 33, 30, 0, 70, 5]);
-	g.minimum_value = 0;
-	g.maximum_value = 100;
-
-	g.draw();
-}

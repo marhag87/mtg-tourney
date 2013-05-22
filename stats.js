@@ -38,7 +38,6 @@ function getDeckPlayerWins(deckId,that){
 		});
 		//$(".deckPlayerWinsNumber").transify({opacityOrig: 0.5});
 		plotData(scores);
-		plotGraphData();
 		$('#winsStats').show();
 		$('#winsStatsGraph').show();
 		$('#graphLengther').show();
